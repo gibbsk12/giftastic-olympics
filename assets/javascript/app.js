@@ -25,7 +25,7 @@ $("#addSport").on("click", function (event) {
 //Function to fetch GIFs and display them in a new gif! 
 function displayGifs(){
 	var gifSport = $(this).attr("data-name");
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=olympics+"+gifSport+"&api_key=b87QAKbdDILlu8DgJ2mRKVdZVrxwPfMa&limit=10"
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=olympics+"+gifSport+"&api_key=b87QAKbdDILlu8DgJ2mRKVdZVrxwPfMa&limit=10"
 	$.ajax({
 		url: queryURL,
 		method: "GET"
