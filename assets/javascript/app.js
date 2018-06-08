@@ -21,4 +21,28 @@ $("#addSport").on("click", function (event) {
 	sports.push(newSport);
 	makeButtons();
 });
-//
+
+//Function to fetch GIFs and display them in a new gif! 
+function displayGifs(){
+	var gifSport = $(this).attr("data-name");
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q=olympics+"+gifSport+"&api_key=b87QAKbdDILlu8DgJ2mRKVdZVrxwPfMa&limit=10"
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	}).then(function(response){
+		console.log(response);
+		var results = response.data;
+		console.log(results);
+		for (var i = 0; i < results.length; i++){
+			var newDiv = $("<div>").addClass("text-center");
+			var newP = $("<p>").text("Rating: "+results[i].rating)
+			var sportsGif= $("<img>")
+			.attr("src", results[i].images.fixed_height.url)
+			newDiv.append(newP)
+			.append(sportsGif);
+			$("#sportsGifs").prepend(newDiv);
+		}
+	})
+}
+//Listens for button click and displays the gifs
+$(document).on("click", ".sport", displayGifs);
