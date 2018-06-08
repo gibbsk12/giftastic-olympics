@@ -1,0 +1,16 @@
+body{
+    background-color: lightgray
+}
+#topPhoto{
+    width:100%;
+}
+
+.btn-warning{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#sport-form{
+    margin-top: 5px;
+}

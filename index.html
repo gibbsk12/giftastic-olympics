@@ -1,49 +1,31 @@
-<header>
-    <title>Olympic GIF Finder</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+<head>
+    <title>Giftastic Olympics</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./javascript/app.js"></script>
-</header>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
 
 <body>
+    <header>
+        <img src="./assets/images/justtheheader.png" id="topPhoto">
+    </header>
     <div class="container">
-        <div class="row justify-content-center" id="toprow">
-            <div class="col-4">
-                <img src="./images/rings.png" class="img-fluid">
-            </div>
-            <div class="col-4">
-                <img src="./images/title.png" class="img-fluid">
-            </div>
-            <div class="col-4">
-                <img src="./images/rings.png" class="img-fluid">
-            </div>
-        </div>
         <div class="row">
             <div class="col-12">
-                <div class="jumbotron">
-                    <!-- This is where the buttons will go for users to click to generate gifs -->
-                    <p>Click any button to get started!</p>
-                    <div id="sportsButtonsDiv"></div>
-                    <!-- This is the form for users to add a button -->
-                    <form id="add-button">
-                        <input type="text" id="user-input">
-                        <input id="add-sport" type="submit" value="Add Another Sport">
-                    </form>
-                    <!-- This is where gifs will generate  -->
-                    <div id="gifsGoHere"></div>
-                </div>
+                <div id="sportButtons"></div>
+                <form id="sport-form">
+                    <label for="sport-input">Add a Sport:</label>
+                    <input type="text" id="sport-input">
+                    <input id="addSport" type="submit" value="Submit">
+                </form>
+                <div id="sportsGifs"></div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
