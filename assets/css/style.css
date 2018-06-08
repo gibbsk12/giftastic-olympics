@@ -11,6 +11,11 @@ body{
     margin-right: 5px;
 }
 
+.col-lg-4,
+.col-lg-8 {
+    padding: 0;
+    
+}
 #sport-form{
-    margin-top: 5px;
+    margin-top: 10px;   
 }

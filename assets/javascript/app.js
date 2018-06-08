@@ -34,15 +34,31 @@ function displayGifs(){
 		var results = response.data;
 		console.log(results);
 		for (var i = 0; i < results.length; i++){
-			var newDiv = $("<div>").addClass("text-center");
+			var newDiv = $("<div>")
+			.addClass("text-center")
 			var newP = $("<p>").text("Rating: "+results[i].rating)
 			var sportsGif= $("<img>")
-			.attr("src", results[i].images.fixed_height.url)
-			newDiv.append(newP)
-			.append(sportsGif);
+			.addClass("sportsImage")
+			.attr("src", results[i].images.fixed_height_still.url)
+			.attr("isPlaying", results[i].images.fixed_height.url)
+			.attr("isStopped", results[i].images.fixed_height_still.url);
+			newDiv.append(sportsGif)
+			.append(newP);
 			$("#sportsGifs").prepend(newDiv);
 		}
 	})
 }
 //Listens for button click and displays the gifs
 $(document).on("click", ".sport", displayGifs);
+
+//Listens for gif clicks and replaces the still with regular URL
+$(document).on("click", ".sportsImage", function(){
+	var src = $(this).attr("src");
+	if ($(this).hasClass("playing")){
+		$(this).attr("src", $(this).attr("isStopped"));
+		$(this).removeClass("playing")
+	}else {
+		$(this).addClass("playing");
+		$(this).attr("src", $(this).attr("isPlaying"))
+	}
+	});

@@ -1,7 +1,10 @@
+<html>
+
 <head>
     <title>Giftastic Olympics</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -15,17 +18,17 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div id="sportButtons"></div>
-                <form id="sport-form">
-                    <label for="sport-input">Add a Sport:</label>
-                    <input type="text" id="sport-input">
-                    <input id="addSport" type="submit" value="Submit">
-                </form>
-                <div id="sportsGifs"></div>
-            </div>
+            <div id="sportButtons"></div>
+            <form id="sport-form">
+                <label for="sport-input">Add a Sport:</label>
+                <input type="text" id="sport-input">
+                <input id="addSport" type="submit" value="Submit" class="btn btn-info">
+            </form>
         </div>
+        <div id="sportsGifs"></div>
     </div>
 
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
+
+</html>
