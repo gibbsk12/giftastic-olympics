@@ -1,20 +1,20 @@
-var sports = ["SWIMMING", "GYMNASTICS", "FIGURE SKATING", "BEACH VOLLEYBALL", "FENCING", "CURLING"]
-var sportsDiv = $("#sportButtons")
-//Makes a button for each sport in the array 
+var sports = ["SWIMMING", "CURLING", "GYMNASTICS", "FIGURE SKATING"];
+var sportsDiv = $("#sportsButtons")
+
 function makeButtons(){
-	sportsDiv.empty();
-	for (var i = 0; i < sports.length; i++){
-		var newButton = $("<button>")
-		.addClass("sport")
-		.addClass("btn btn-warning")
-		.attr("data-name", sports[i])
-		.text(sports[i]);
-		sportsDiv.append(newButton);
-	}
+    sportsDiv.empty();
+    for (var i = 0; i <sports.length; i++){
+        var newButton = $("<button>")
+        .addClass("sport")
+        .addClass("btn btn-dark")
+        .attr("data-name", sports[i])
+        .text(sports[i]);
+        sportsDiv.append(newButton);
+    }
 }
-//Calls the function so buttons appear on page load 
+
 makeButtons();
-//When the user clicks add sport button, adds the sport to the array and recreates buttons
+
 $("#addSport").on("click", function (event) {
 	event.preventDefault();
 	var newSport = $("#sport-input").val().trim().toUpperCase();
@@ -35,10 +35,12 @@ function displayGifs(){
 		console.log(results);
 		for (var i = 0; i < results.length; i++){
 			var newDiv = $("<div>")
-			.addClass("text-center")
+            .addClass("text-center")
+            .addClass("holder");
 			var newP = $("<p>").text("Rating: "+results[i].rating)
 			var sportsGif= $("<img>")
-			.addClass("sportsImage")
+            .addClass("sportsImage")
+            .addClass("img-fluid")
 			.attr("src", results[i].images.fixed_height_still.url)
 			.attr("isPlaying", results[i].images.fixed_height.url)
 			.attr("isStopped", results[i].images.fixed_height_still.url);
