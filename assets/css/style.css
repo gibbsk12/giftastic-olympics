@@ -15,7 +15,9 @@ header{
 }
 
 .sport{
-    margin: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
 }
 
 .holder{
@@ -26,5 +28,9 @@ header{
 
 #sportsGifs{
     padding: 1%;
+}
+
+.directions{
+    margin-top: 5px;
 }
 
